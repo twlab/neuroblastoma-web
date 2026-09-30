@@ -1,0 +1,576 @@
+{
+  "root": "https://epigenome.wustl.edu/tychele-lab/",
+  "crawled": "2026-09-30",
+  "files": [
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/abc/results_hek293_test_scorethresold_0.021_self_promoter.bedpe_abc_loops.interact.bed.abc_out.bb",
+      "size": "2.7M"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/pooled/hek293_rep.pooled.fc.signal.bigwig",
+      "size": "2.3G"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/pooled/hek293_rep.pooled.pval.signal.bigwig",
+      "size": "1.7G"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/pooled/hek293_rep.pooled.pval0.01.300K.bfilt.narrowPeak.bb",
+      "size": "13M"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/rep1/HEK293_ATACSeq_rep1.fc.signal.bigwig",
+      "size": "1.0G"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/rep1/HEK293_ATACSeq_rep1.narrowPeak.bb",
+      "size": "13M"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/rep1/HEK293_ATACSeq_rep1.pval.signal.bigwig",
+      "size": "679M"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/rep2/HEK293_ATACSeq_rep2.fc.signal.bigwig",
+      "size": "1.2G"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/rep2/HEK293_ATACSeq_rep2.narrowPeak.bb",
+      "size": "13M"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/rep2/HEK293_ATACSeq_rep2.pval.signal.bigwig",
+      "size": "888M"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/rep3/HEK293_ATACSeq_rep3.fc.signal.bigwig",
+      "size": "1.1G"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/rep3/HEK293_ATACSeq_rep3.narrowPeak.bb",
+      "size": "13M"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/atac_seq/rep3/HEK293_ATACSeq_rep3.pval.signal.bigwig",
+      "size": "891M"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/delta/hek293_localized_loops_0.bb",
+      "size": "639K"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/hic/hek293_merged_loops_30.bedpe.bb",
+      "size": "510K"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/mustache/hek293_inter_30.hic_test_mustache.bb",
+      "size": "610K"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/rna_seq/rep1hek293_genome_all.bw",
+      "size": "538M"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/rna_seq/rep2hek293_genome_all.bw",
+      "size": "541M"
+    },
+    {
+      "cellLine": "HEK-293",
+      "path": "HEK-293/rna_seq/rep3hek293_genome_all.bw",
+      "size": "528M"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/abc/results_ht22_test_scorethresold_0.021_self_promoter.bedpe_abc_loops.interact.bed.abc_out.bb",
+      "size": "2.2M"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/pooled/ht22_rep.pooled.fc.signal.bigwig",
+      "size": "3.6G"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/pooled/ht22_rep.pooled.pval.signal.bigwig",
+      "size": "2.0G"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/pooled/ht22_rep.pooled.pval0.01.300K.bfilt.narrowPeak.bb",
+      "size": "11M"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/rep1/HT22_20221215_ATACSeq_rep1.fc.signal.bigwig",
+      "size": "1.5G"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/rep1/HT22_20221215_ATACSeq_rep1.narrowPeak.bb",
+      "size": "11M"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/rep1/HT22_20221215_ATACSeq_rep1.pval.signal.bigwig",
+      "size": "1.5G"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/rep2/HT22_20221215_ATACSeq_rep2.fc.signal.bigwig",
+      "size": "1.5G"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/rep2/HT22_20221215_ATACSeq_rep2.narrowPeak.bb",
+      "size": "10M"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/rep2/HT22_20221215_ATACSeq_rep2.pval.signal.bigwig",
+      "size": "1.4G"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/rep3/HT-22_20221215_ATACSeq_rep3.pval.signal.bigwig",
+      "size": "1.1G"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/rep3/HT22_20221215_ATACSeq_rep3.fc.signal.bigwig",
+      "size": "1.1G"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/atac_seq/rep3/HT22_20221215_ATACSeq_rep3.narrowPeak.bb",
+      "size": "10M"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/delta/ht22_localized_loops_0.bb",
+      "size": "552K"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/hic/ht22_merged_loops_30.bedpe.bb",
+      "size": "441K"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/mustache/ht22_inter_30.hic_test_mustache_allchr.tsv.interact_test.bed_test_mustache.bb",
+      "size": "650K"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/rna_seq/rep1_ht_22_genome_all.bw",
+      "size": "350M"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/rna_seq/rep2_ht_22_genome_all.bw",
+      "size": "350M"
+    },
+    {
+      "cellLine": "HT-22",
+      "path": "HT-22/rna_seq/rep3_ht_22_genome_all.bw",
+      "size": "336M"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/abc/results_imr32_test_scorethresold_0.021_self_promoter.bedpe_abc_loops.interact.bed.abc_out.bb",
+      "size": "2.4M"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/pooled/imr32_rep.pooled.fc.signal.bigwig",
+      "size": "2.6G"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/pooled/imr32_rep.pooled.pval.signal.bigwig",
+      "size": "1.8G"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/pooled/imr32_rep.pooled.pval0.01.300K.bfilt.narrowPeak.bb",
+      "size": "13M"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/rep1/IMR-32_1_1__ATACSeq.rep1.fc.signal.bigwig",
+      "size": "1.2G"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/rep1/IMR-32_1_1__ATACSeq.rep1.pval.signal.bigwig",
+      "size": "855M"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/rep1/IMR32_1_1__ATACSeq.rep1.narrowPeak.bb",
+      "size": "14M"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/rep2/IMR-32_2_2__ATACSeq.rep2.fc.signal.bigwig",
+      "size": "1.3G"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/rep2/IMR-32_2_2__ATACSeq.rep2.pval.signal.bigwig",
+      "size": "1.2G"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/rep2/IMR32_2_2__ATACSeq.rep2.narrowPeak.bb",
+      "size": "14M"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/rep3/IMR-32_3_3__ATACSeq.rep3.fc.signal.bigwig",
+      "size": "1.2G"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/rep3/IMR-32_3_3__ATACSeq.rep3.narrowPeak.bb",
+      "size": "14M"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/atac_seq/rep3/IMR-32_3_3__ATACSeq.rep3.pval.signal.bigwig",
+      "size": "864M"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/delta/imr32_localized_loops_0.bb",
+      "size": "679K"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/hic/imr32_merged_loops_30.bedpe.bb",
+      "size": "587K"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/mustache/imr32_inter_30.hic_test_mustache_allchr.tsv.interact_test.bed_test_mustache.bb",
+      "size": "697K"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/rna_seq/rep1imr_rnaseq_genome_all.bw",
+      "size": "520M"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/rna_seq/rep2imr_rnaseq_genome_all.bw",
+      "size": "539M"
+    },
+    {
+      "cellLine": "IMR-32",
+      "path": "IMR-32/rna_seq/rep3imr_rnaseq_genome_all.bw",
+      "size": "512M"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/abc/results_neuro2a_test_scorethresold_0.021_self_promoter.bedpe_abc_loops.interact.bed.abc_out.bb",
+      "size": "2.2M"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/pooled/neuro2a_rep.pooled.fc.signal.bigwig",
+      "size": "3.7G"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/pooled/neuro2a_rep.pooled.pval.signal.bigwig",
+      "size": "2.0G"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/pooled/neuro2a_rep.pooled.pval0.01.300K.bfilt.narrowPeak.bb",
+      "size": "13M"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/rep1/Neuro_2a_ATACSeq_rep1.fc.signal.bigwig",
+      "size": "1.5G"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/rep1/Neuro_2a_ATACSeq_rep1.pval.signal.bigwig",
+      "size": "1.1G"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/rep1/Neuro_2a_ATACSeq_rep1narrowPeak.bb",
+      "size": "10M"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/rep2/Neuro_2a_ATACSeq_rep2.fc.signal.bigwig",
+      "size": "1.5G"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/rep2/Neuro_2a_ATACSeq_rep2.narrowPeak.bb",
+      "size": "10M"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/rep2/Neuro_2a_ATACSeq_rep2.pval.signal.bigwig",
+      "size": "1.2G"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/rep3/Neuro_2a_ATACSeq_rep3.fc.signal.bigwig",
+      "size": "1.4G"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/rep3/Neuro_2a_ATACSeq_rep3.narrowPeak.bb",
+      "size": "10M"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/atac_seq/rep3/Neuro_2a_ATACSeq_rep3.pval.signal.bigwig",
+      "size": "1.2G"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/delta/neuro2a_localized_loops_0.bb",
+      "size": "597K"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/hic/neuro2a_merged_loops_30.bedpe.bb",
+      "size": "600K"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/mustache/neuro2a_inter_30.hic_test_mustache_allchr.tsv.interact_test.bed_test_mustache.bb",
+      "size": "627K"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/rna_seq/rep1neuro2a_20230206_genome_all.bw",
+      "size": "400M"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/rna_seq/rep2neuro2a_20230206_genome_all.bw",
+      "size": "407M"
+    },
+    {
+      "cellLine": "Neuro-2a",
+      "path": "Neuro-2a/rna_seq/rep3neuro2a_20230206_genome_all.bw",
+      "size": "524M"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/abc/results_shsy5y_test_scorethresold_0.021_self_promoter.bedpe_abc_loops.interact.bed.abc_out.bb",
+      "size": "2.3M"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/pooled/shsy5y_rep.pooled.fc.signal.bigwig",
+      "size": "4.2G"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/pooled/shsy5y_rep.pooled.pval.signal.bigwig",
+      "size": "2.3G"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/pooled/shsy5y_rep.pooled.pval0.01.300K.bfilt.narrowPeak.bb",
+      "size": "14M"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/rep1/SHSY5Y_1_3_ATACSeq_rep1.narrowPeak.bb",
+      "size": "11M"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/rep1/SHSY5Y_ATACSeq_rep1.fc.signal.bigwig",
+      "size": "1.9G"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/rep1/SHSY5Y_ATACSeq_rep1.pval.signal.bigwig",
+      "size": "1.5G"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/rep2/SHSY5Y_ATACSeq_rep2.fc.signal.bigwig",
+      "size": "1.3G"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/rep2/SHSY5Y_ATACSeq_rep2.narrowPeak.bb",
+      "size": "11M"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/rep2/SHSY5Y_ATACSeq_rep2.pval.signal.bigwig",
+      "size": "1.1G"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/rep3/SHSY5Y_ATACSeq.rep3.narrowPeak.bb",
+      "size": "14M"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/rep3/SHSY5Y_ATACSeq_rep3.fc.signal.bigwig",
+      "size": "1.2G"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/atac_seq/rep3/SHSY5Y_ATACSeq_rep3.pval.signal.bigwig",
+      "size": "1.2G"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/delta/shsy5y_localized_loops_0.bb",
+      "size": "690K"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/hic/shsy5y_merged_loops_30.bedpe.bb",
+      "size": "660K"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/mustache/shsy5y_inter_30.hic_test_mustache_allchr.tsv.interact_test.bed_test_mustache.bb",
+      "size": "723K"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/rna_seq/rep1shsy5y_genome_all.bw",
+      "size": "536M"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/rna_seq/rep2shsy5y_genome_all.bw",
+      "size": "469M"
+    },
+    {
+      "cellLine": "SH-SY5Y",
+      "path": "SH-SY5Y/rna_seq/rep3shsy5y_genome_all.bw",
+      "size": "497M"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/abc/results_sknsh_test_scorethresold_0.021_self_promoter.bedpe_abc_loops.interact.bed.abc_out.bb",
+      "size": "2.3M"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/pooled/sknsh_rep.pooled.fc.signal.bigwig",
+      "size": "4.3G"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/pooled/sknsh_rep.pooled.pval.signal.bigwig",
+      "size": "2.3G"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/pooled/sknsh_rep.pooled.pval0.01.300K.bfilt.narrowPeak.bb",
+      "size": "11M"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/rep1/SKNSH_ATACSeq_rep1.fc.signal.bigwig",
+      "size": "1.6G"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/rep1/SKNSH_ATACSeq_rep1.narrowPeak.bb",
+      "size": "11M"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/rep1/SKNSH_ATACSeq_rep1.pval.signal.bigwig",
+      "size": "1.2G"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/rep2/SKNSH_ATACSeq_rep2.fc.signal.bigwig",
+      "size": "1.5G"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/rep2/SKNSH_ATACSeq_rep2.narrowPeak.bb",
+      "size": "11M"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/rep2/SKNSH_ATACSeq_rep2.pval.signal.bigwig",
+      "size": "1.2G"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/rep3/SKNSH_ATACSeq_rep3.fc.signal.bigwig",
+      "size": "1.6G"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/rep3/SKNSH_ATACSeq_rep3.narrowPeak.bb",
+      "size": "11M"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/atac_seq/rep3/SKNSH_ATACSeq_rep3.pval.signal.bigwig",
+      "size": "1.5G"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/delta/sknsh_localized_loops_0.bb",
+      "size": "701K"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/hic/sknsh_merged_loops_30.bedpe.bb",
+      "size": "635K"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/mustache/sknsh_inter_30.hic_test_mustache_allchr.tsv.interact_test.bed_test_mustache.bb",
+      "size": "717K"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/rna_seq/rep1sknsh_rnaseq_genome_all.bw",
+      "size": "499M"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/rna_seq/rep2sknsh_rnaseq_genome_all.bw",
+      "size": "474M"
+    },
+    {
+      "cellLine": "SK-N-SH",
+      "path": "SK-N-SH/rna_seq/rep3sknsh_rnaseq_genome_all.bw",
+      "size": "436M"
+    }
+  ]
+}

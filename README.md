@@ -1,0 +1,154 @@
+# Neuroblastoma Epigenome
+
+A small web application for browsing ATAC-seq, RNA-seq, Hi-C loop and ABC
+interaction tracks for six cell lines in the
+[WashU Epigenome Browser](https://epigenomegateway.wustl.edu/), embedded via
+the [`wuepgg`](https://www.npmjs.com/package/wuepgg) React package.
+
+Source: <https://github.com/twlab/neuroblastoma-web> · Deployment: [DEPLOY.md](DEPLOY.md)
+
+| Genome | Cell lines |
+| ------ | ---------- |
+| Human (hg38) | IMR-32, SK-N-SH, SH-SY5Y, HEK-293 |
+| Mouse (mm10) | Neuro-2a, HT-22 |
+
+Each cell line provides 19 track files (114 in total), all served from
+<https://epigenome.wustl.edu/tychele-lab/>:
+
+| Assay | Colour | Files |
+| ----- | ------ | ----- |
+| ATAC-seq | blue | fold-change signal (bigWig), P-value signal (bigWig) and narrowPeak calls (bigBed) for rep1–3 and the pooled replicate |
+| RNA-seq | green | signal bigWig for rep1–3 |
+| Hi-C loops | pink | HiCCUPS, DELTA and Mustache loop calls (bigBed) |
+| ABC | purple | Activity-by-Contact interactions (bigBed) |
+
+`.bw` / `.bigwig` files are loaded as track type `bigwig`, `.bb` files as `bigbed`.
+
+### How selection works
+
+1. **Primary genome** (Human hg38 by default, or Mouse mm10). Switching applies
+   immediately: the browser is re-initialised on that genome with its default
+   tracks only (ruler + RefSeq genes).
+2. **Human / Mouse tabs** list every track of both genomes with check marks.
+   Checking only edits a *draft* — nothing changes in the browser yet. The tab
+   of the primary genome is marked *primary*; the other tab is marked *query*.
+3. **Update browser** (sticky button at the bottom of the panel, also offered in
+   the info bar) renders the checked tracks. *Discard* reverts the check marks to
+   what is rendered. The bar turns amber while there are unapplied changes.
+4. The **info bar above the browser** states which genome is primary, which is
+   the query, and lists exactly which data tracks of each genome are rendered.
+
+### Comparative view (query genome)
+
+Tracks checked on the non-primary tab are rendered as the **query genome**: the
+app builds the track list the same way the
+[WashU comparative browser](https://epigenomegateway.readthedocs.io/en/latest/comparativeBrowser.html)
+and the [BICAN basal ganglia portal](https://github.com/twlab/bg-epigenome-portal) do:
+
+1. ruler + `refGene` + rendered data tracks of the primary genome;
+2. a `genomealign` track (`querygenome`, alignment URL) attaching the query genome;
+3. the query genome's `refGene` and its rendered data tracks, each tagged
+   `metadata: { genome: "<query>" }` so the browser draws them through the alignment.
+
+The query genome is attached automatically as soon as one of its tracks is
+rendered, and detached when none are. Alignments live in `ALIGNMENTS` in
+`src/data/tracks.ts` and are the browser's own pairwise files
+(`hg38_mm10_axt.gz` / `mm10_hg38_axt.gz` on vizhub). Adding a third genome
+means adding it to `GENOMES`, `CELL_LINES` and an `ALIGNMENTS[primary][query]`
+entry — tabs, info bar and URL state are driven from those tables (the basal
+ganglia portal handles four genomes this way).
+
+## Run locally
+
+```bash
+npm install
+npm run dev        # http://localhost:5173
+```
+
+Other scripts:
+
+```bash
+npm run build          # production build into dist/
+npm run preview        # serve dist/ locally
+npm run typecheck      # tsc --noEmit
+npm run check:tracks   # validate src/data/manifest.json (add --head to HEAD-check every URL)
+```
+
+Requires Node 20+.
+
+## How it works
+
+```
+src/
+  main.tsx               entry point (no StrictMode – see note below)
+  App.tsx                genome switch, track selection state, URL hash sync, layout
+  components/
+    GenomeToggle.tsx     primary genome (Human hg38 / Mouse mm10)
+    TrackPicker.tsx      Human / Mouse tabs of per-cell-line, per-assay check-mark chips + quick picks
+    ViewSummary.tsx      info bar above the browser: primary, query, rendered tracks, pending changes
+    BrowserPane.tsx      thin wrapper around <GenomeHub /> from wuepgg
+  data/
+    manifest.json        verbatim listing of every file on the data host
+    tracks.ts            manifest -> typed track definitions; ALIGNMENTS; buildBrowserTracks()
+  urlState.ts            #g=…&t=…&r=… encoding of the rendered view
+  types/wuepgg.d.ts      type shim for wuepgg (the package ships no .d.ts yet)
+  styles.css
+scripts/check-tracks.mjs validates the manifest
+.github/workflows/deploy.yml  GitHub Pages deployment
+```
+
+* **State lives in this app, not in the embedded browser.** `GenomeHub` is
+  created with `enablePersistence: false` and one `storeId` per genome, so it
+  mirrors the `tracks` / `viewRegion` props it is given instead of restoring a
+  stale session from `localStorage`. The browser is only rebuilt when the
+  primary genome changes or *Update browser* is pressed; the region the user has
+  navigated to (reported through `onSessionUpdate`) is carried over so the view
+  does not jump.
+* **Shareable links.** The primary genome (`g`), the *rendered* track ids of
+  both genomes (`t`; ids of the non-primary genome imply the query genome) and
+  the current region (`r`, in primary coordinates) are mirrored into the URL
+  hash, e.g. `#g=hg38&t=imr32.atac.pooled.fc,neuro2a.atac.pooled.fc&r=chr2:15800000-16100000`.
+  "Copy link" copies it (unapplied check marks are not part of the link). Track
+  ids are stable (`<cellline>.<assay>.<replicate>.<kind>`).
+* **Default view.** Without a track list in the URL the browser shows only the
+  default tracks around the *MYCN* / *Mycn* locus; change `defaultRegion` in
+  `data/tracks.ts`.
+* **Always-on tracks.** A ruler and the `refGene` annotation for the genome are
+  prepended to every track list (`baseTracks()` in `data/tracks.ts`).
+
+### Notes on the embedded browser
+
+* `wuepgg` does not publish TypeScript declarations, so `src/types/wuepgg.d.ts`
+  declares the props this app uses. Delete it if a future release ships types.
+* The app is intentionally rendered without `<StrictMode>`, matching the
+  upstream embedding example ([twlab/embed-eg3](https://github.com/twlab/embed-eg3)).
+* `vite.config.ts` defines `global` and `process.env` the same way the upstream
+  browser build does, because some transitive dependencies expect them.
+* `regionToString()` in `urlState.ts` accepts the region shapes we expect from
+  `onSessionUpdate` (`"chr:start-end"`, `{ genomeCoordinate }`, `{ chr, start, end }`).
+  If the browser reports a different shape, the app still works but stops
+  carrying the region over when tracks change; extend that function.
+
+## Updating the data
+
+`src/data/manifest.json` lists every file exactly as it appears on the host.
+File names on the host are irregular (mixed `.bw`/`.bigwig`, `IMR-32_` vs
+`IMR32_`, `rep1narrowPeak` without a dot, …), so **nothing is guessed from a
+pattern** – a file is only offered if it is in the manifest. To add or rename
+files:
+
+1. Add/adjust entries in `manifest.json` (`cellLine`, `path` relative to the
+   root, `size` is informational).
+2. Run `npm run check:tracks -- --head` to confirm every URL answers 200.
+3. `tracks.ts` derives assay, replicate and kind from the folder
+   (`abc`, `atac_seq/<pooled|rep1-3>`, `delta`, `hic`, `mustache`, `rna_seq`)
+   and a few stable substrings (`.fc.signal`, `.pval.signal`, `narrowPeak`,
+   leading `repN`). New folders need a new `case` there.
+
+To add a cell line, append it to `CELL_LINES` in `tracks.ts` with its genome.
+
+## Deployment
+
+The site is published to GitHub Pages by `.github/workflows/deploy.yml` on
+every push to `main`. Setup, custom-domain and base-path details are in
+[DEPLOY.md](DEPLOY.md).
