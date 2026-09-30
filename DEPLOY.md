@@ -16,7 +16,15 @@ On every push to `main` (or a manual run from the Actions tab):
    is switched on;
 4. runs `npm run build` and publishes `dist/` with `actions/deploy-pages`.
 
-Node 22 is used in CI; locally anything ≥ 20 works.
+Node 22 (npm 10.9) is used in CI; locally anything ≥ 20 works.
+
+If `npm ci` reports that `package-lock.json` is out of sync, the workflow falls
+back to `npm install` and adds a warning to the run instead of failing. To get
+back to reproducible installs, run `npm install` locally with npm 10.9 or newer
+(`npm -v`) and commit the updated lock file. One known source of drift: older
+npm versions leave the peer dependency `buffer@>=6.0.3` of `crc` (a transitive
+dependency of `wuepgg`) unsatisfied, whereas npm 10.9 expects `buffer@6.0.3` at
+the top level and `buffer@5.7.1` nested under `node-stdlib-browser`.
 
 ## One-time repository setup
 
