@@ -244,9 +244,12 @@ export default function App() {
         <div className="sidebar-top">
           <div className="brand">
             <div>
-              <h1>Neuroblastoma Epigenome</h1>
-              <p className="tagline">
-                ATAC-seq, RNA-seq, Hi-C loops and ABC interactions across six cell lines.
+              <h1>Cell Line Atlas</h1>
+              <p className="tagline" style={{ marginBottom: "0.5em", fontStyle: "italic" }}>
+                Multi-omic profiles of commonly used experimental cell lines
+                </p>
+                <p className="tagline">
+                Explore RNA-seq, ATAC-seq, Hi-C loops, and regulatory interactions across human and mouse cell models.
               </p>
             </div>
             <button
